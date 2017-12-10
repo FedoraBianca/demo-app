@@ -1,0 +1,16 @@
+<div class="slider-gallery">
+    <ngx-carousel
+      [inputs]="carouselTile"
+      (carouselLoad)="carouselTileLoad($event)">
+
+            <ngx-item class="tile" NgxCarouselItem *ngFor="let Tile of carouselTileItems">
+                <a class="tile-container"  href="#">
+                  <span class="rollover" ></span>
+                  <img class="tile-image" [src]="Tile.imageSrc" alt="Event Image"> 
+                </a>
+            </ngx-item>
+
+          <button NgxCarouselPrev class='leftRs'>&lt;</button>
+          <button NgxCarouselNext class='rightRs'>&gt;</button>
+    </ngx-carousel>
+</div>

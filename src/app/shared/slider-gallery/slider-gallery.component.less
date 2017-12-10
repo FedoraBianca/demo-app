@@ -1,0 +1,61 @@
+@tile-radius: 20px;
+
+
+.slider-gallery{
+    .tile-container{
+        position: relative;
+            
+        .tile-image{
+            border-radius: @tile-radius;
+            height: 200px;
+        }
+
+        .rollover {
+            -o-transition-duration: 1s;
+            -moz-transition-duration: 1s;
+            -webkit-transition: -webkit-transform 1s;
+            background: url('/assets/images/mag.png') center center no-repeat white;
+            cursor: pointer;
+            height: 200px;
+            width: 100%;
+            position: absolute;
+            z-index: 10;
+            opacity: 0;
+            border-radius: @tile-radius;                  
+        }
+
+        &:hover .rollover {
+            opacity: .7;
+            -o-transition-duration: 1s;
+            -moz-transition-duration: 1s;
+            -webkit-transition: -webkit-transform 1s;
+            -webkit-box-shadow: 0px 0px 4px #000;
+            -moz-box-shadow: 0px 0px 4px #000;
+            box-shadow: 0px 0px 4px #000;
+        }
+    }
+
+    .leftRs {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        width: 50px;
+        height: 50px;
+        box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
+        border-radius: 999px;
+        left: 0;
+    }
+
+    .rightRs {
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        width: 50px;
+        height: 50px;
+        box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
+        border-radius: 999px;
+        right: 0;
+    }
+}
